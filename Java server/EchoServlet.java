@@ -29,7 +29,7 @@ public class EchoServlet extends HttpServlet {
          // Get empty string or string of white spaces if user did not fill in
          if (username == null
                || (username = htmlFilter(username.trim())).length() == 0) {
-            out.println("<p>Név: HIÁNYZIK A NEVED GYULA</p>");
+            out.println("<p>Neved: Nincs neved Gyula</p>");
          } else {
             out.println("<p>Neved: " + username + "</p>");
          }
@@ -38,9 +38,9 @@ public class EchoServlet extends HttpServlet {
          String password = request.getParameter("password");
          if (password == null
                || (password = htmlFilter(password.trim())).length() == 0) {
-            out.println("<p>Jelszó: HIÁNYZIK</p>");
+            out.println("<p>Jelszo: NINCS</p>");
          } else {
-            out.println("<p>Jelszó: " + password + "</p>");
+            out.println("<p>Jelszo: " + password + "</p>");
          }
  
          // Retrieve the value of the query parameter "gender" (from radio button)
@@ -49,9 +49,9 @@ public class EchoServlet extends HttpServlet {
          if (gender == null) {
             out.println("<p>Nemed: Nem-e?</p>");
          } else if (gender.equals("m")) {
-            out.println("<p>Nemed: fiú</p>");
+            out.println("<p>Nemed: fiu</p>");
          } else {
-            out.println("<p>Nemed: lány</p>");
+            out.println("<p>Nemed: lany</p>");
          }
  
          // Retrieve the value of the query parameter "age" (from pull-down menu)

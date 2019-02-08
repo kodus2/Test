@@ -11,12 +11,22 @@
 		<servlet-class>test.TestServlet</servlet-class> <!-- package-n belül az osztályt kell megjelölni test(package).TestServlet(class) -->
 	</servlet>
 	
+	<servlet>
+		<servlet-name>EchoServlet</servlet-name>
+		<servlet-class>test.EchoServlet</servlet-class>
+	</servlet>
+	
 	<!-- Note: All <servlet> elements MUST be grouped together and
 		placed IN FRONT of the <servlet-mapping> elements -->
 	
 	<servlet-mapping>
 		<servlet-name>TestServlet</servlet-name>
 		<url-pattern>/mutasd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>EchoServlet</servlet-name>
+		<url-pattern>/echo</url-pattern>
 	</servlet-mapping>
 </web-app>
 	
